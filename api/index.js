@@ -1,13 +1,10 @@
 import express from 'express';
+import data from '../src/testData';
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.send({ data: [] });
-});
-
-router.get('/add', (req, res) => {
-    res.send(`Request came from /add endpoint.. ${req.originalUrl}`);
+router.get('/contests', (req, res) => {
+    res.send({ contests: data.contests });
 });
 
 export default router;
